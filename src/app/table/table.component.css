@@ -1,0 +1,30 @@
+.box {
+    position: fixed;
+    top: 24%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 85%;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15%;
+    border-radius: 0.625rem;
+}
+
+#div_button_dashbords{
+    width:60px ;height: 280px; position: fixed; margin-top: 130px;
+}     
+
+#div_table{
+    overflow:auto;height:100% ;width: 90%; margin-left: 130px; background-color: rgb(233, 226, 226,0.9); 
+}
+
+#table{
+    margin-top: 50px;height: 100%;width: 100%; 
+}
+
+

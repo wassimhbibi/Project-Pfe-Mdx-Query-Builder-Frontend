@@ -1,0 +1,17 @@
+.box {
+    position: fixed;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    background: rgb(254, 254, 254,0.8);
+    border-radius: 0.625rem;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 11.5%;
+    padding-top: 15px;
+}

@@ -1,0 +1,68 @@
+.box {
+    position: fixed;
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 30cm;
+    height: 15cm;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+    padding-top: 15px;
+    border-radius: 7px;
+}
+
+.box2 {
+    position: fixed;
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 13cm;
+    height: 10cm;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0);
+    align-items: center;
+    margin-left: 1%;
+    margin-right: 9%;
+    margin-top: 2%;
+    padding-top: 15px;
+    border-radius: 7px;
+}
+
+.box3 {
+    position: fixed;
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 13cm;
+    height: 10cm;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0);
+    align-items: center;
+    margin-left: 60%;
+    margin-right: 20%;
+    margin-top: 2%;
+    padding-top: 15px;
+    border-radius: 7px;
+}
+
+.color_placeholder {
+    color: wheat;
+}
+
+#bouton1 {
+    margin-top: 500px;
+    width: 80px;
+}
+
+#bouton2 {
+    margin-top: 500px;
+    width: 80px;
+    margin-left: 880px;
+}

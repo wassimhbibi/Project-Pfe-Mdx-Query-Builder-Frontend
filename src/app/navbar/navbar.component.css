@@ -1,0 +1,14 @@
+#nav {
+    position: fixed;
+    width: 100%;
+}
+
+#color_name_acteol {
+    color: rgb(126, 124, 124);
+    font-weight: 900;
+    
+}
+
+#color_drop-down_menu {
+    background-color: rgb(99, 98, 98);
+}

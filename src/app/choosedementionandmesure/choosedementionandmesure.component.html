@@ -1,0 +1,34 @@
+<html>
+
+    <head>
+    
+        <title>
+    
+        </title>
+    </head>
+    
+    <body>
+        <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js "></script>
+        <form class="box">
+            <form class="box2">
+    
+                <ng-multiselect-dropdown class="color_placeholder" [placeholder]="'choose measure'" 
+                [settings]="dropdownSettingsmeasure" [data]="dropdownListmeasure" [(ngModel)]="selected_Items_measure" 
+                (onSelect)="on_Item_Select_measure($event)" (onSelectAll)="on_Select_All_measure($event)" (onDeSelect)="on_Item_De_Select_measure($event)" (onDeSelectAll)="on_De_Select_All_measure($event)">
+                </ng-multiselect-dropdown>
+            </form>
+            <form class="box3">
+    
+                <ng-multiselect-dropdown class="color_placeholder" [placeholder]="'choose dimention'" [settings]="dropdownSettingsdimention" [data]="dropdownListdimention" [(ngModel)]="selected_Items_dimention" 
+                (onSelect)="on_Item_Select_dimention($event)" (onSelectAll)="on_Select_All_dimention($event)" (onDeSelect)="on_Item_De_Select_dimention($event)" (onDeSelectAll)="on_De_Select_All_dimention($event)">
+                </ng-multiselect-dropdown>
+            </form>
+            <button type="submit " class="btn btn-danger btn-dark mb-4 " id="bouton1" routerLink="/usecube">Back</button>
+    
+            <button   type="submit " class="btn btn-danger btn-danger mb-4 " id="bouton2" 
+    
+    routerLink="/createmdx" [state]="{name_measure:selected_Items_measure,name_dimention:selected_Items_dimention}" >Next</button></form>
+    
+    </body>
+    
+    </html>

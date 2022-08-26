@@ -1,0 +1,103 @@
+.box {
+    position: fixed;
+    top: 25%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 13cm;
+    height: 8.5cm;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.625rem;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #000000;
+    background-image: none;
+}
+
+
+/* Custom Select */
+
+.select {
+    position: relative;
+    display: block;
+    width: 25em;
+    height: 2.9em;
+    line-height: 3;
+    background: #000000;
+    overflow: hidden;
+    border-radius: .25em;
+    margin-left: 20px;
+}
+
+select {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 .5em;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+/* Arrow */
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    background: #EA3741;
+    pointer-events: none;
+}
+
+
+/* Transition */
+
+.select:hover::after {
+    color: white;
+}
+
+.select::after {
+    -webkit-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+button {
+    width: 210px;
+    margin-top: 30px;
+    margin-left: 105px;
+}
+
+#logoacteol {
+    width: 95px;
+    height: 95px;
+    margin-left: 160px;
+}
+
+#chose {
+    margin-top: 30px;
+}
+
+.error{
+    color: red;
+     margin-left: 90px;
+}

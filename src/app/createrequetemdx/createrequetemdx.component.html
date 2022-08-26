@@ -1,0 +1,116 @@
+
+<form class="box">
+
+    <div class=" form-floating ">
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       
+        <div class="w3-container">
+         
+          <button id="button_info" onclick="document.getElementById('id01').style.display='block'" class="btn btn-success" >  info </button>
+        
+          <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+              <div class="w3-container" >
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <div >
+                <p>We can't used measure in rows and in columns at the same time</p>
+                <p>We can't used more than one measure in filter </p>
+              
+                
+            </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      <!-- Button trigger modal -->
+
+
+
+
+
+        <label id="label_measure">Measure</label>
+        <select id="select_measure" [(ngModel)]="selected_Option_filter_measure" [(ngModel)]="selected_Option_rows_measure" [(ngModel)]="selected_Option_columns_measure" name="first" size="5" multiple>
+                 <option *ngFor="let d of data">
+                {{d.item_text}}
+            </option>
+                           
+
+                </select>
+
+        <label id="label_dimension">Dimension</label>
+        <select id="select_dimension" [(ngModel)]="selected_Option_rows_dimention" [(ngModel)]="selected_Option_columns_dimention" name="first" size="5" multiple>
+<option *ngFor="let o of data2">
+                {{o.item_text}}
+                </select>
+        <div id="div_group_button_measure" class="btn-group" role="group">
+            <button id="f1" type="button" class="btn btn-danger" (click)="print_on_filter_with_measure()"><i class="fa fa-filter" aria-hidden="true"></i></button>
+            <button id="r1" type="button" class="btn btn-danger" (click)="print_on_rows_with_measure()"><i class="fa fa-th-large" aria-hidden="true"></i></button>
+            <button id="c1" type="button" class="btn btn-danger" (click)="print_on_columns_with_measure()"><i class="fa fa-columns" aria-hidden="true"></i></button>
+        </div>
+        <div id="div_group_button_dimension" class="btn-group" role="group">
+            <button id="r1" type="button" class="btn btn-danger" (click)="print_on_rows_with_dimention()"><i class="fa fa-th-large fa fa-columns" aria-hidden="true"></i></button>
+            <button id="c1" type="button" class="btn btn-danger" (click)="print_on_columns_with_dimention()"><i class="fa fa-columns" aria-hidden="true"></i></button>
+        </div>
+
+        <hr>
+        <form class="box2" [formGroup]="loginform">
+             <label id="label_filtred"><i class="fa fa-filter" aria-hidden="true" ></i>Filtred</label> 
+            <select id="select_filter" size="2" [(ngModel)]="selectmeasurefilter" formControlName="selectmeasurefilter">
+            <option>{{printed_Option_filter_measure}}</option>
+
+            </select>
+            <label id="label_columns_measure"><i class="fa fa-columns " aria-hidden="true "></i>Column_measure</label> 
+                <select id="select_colummns_measure" size="2" [(ngModel)]="selectmeasurecolumns" formControlName="selectmeasurecolumns">
+                     <option>
+
+                    {{printed_Option_columns_measure}}
+            
+        </option>
+        </select>
+            <label id="label_rows_measure"><i class="fa fa-th-large " aria-hidden="true "></i>Row_measure </label>
+            <select id="select_rows_measure" size="2" [(ngModel)]="selectmeasurerows" formControlName="selectmeasurerows">
+            <option>
+                {{printed_Option_rows_measure}}
+            </option>
+
+        </select>
+        
+            <label id="label_columns_dimention"><i class="fa fa-columns " aria-hidden="true "></i>Column_dimension</label>
+            <select id="select_rows_dimention" size="2"  [(ngModel)]="selectdimentioncolumns" formControlName="selectdimentioncolumns">   <option>
+
+{{printed_Option_columns_dimention}}
+        </option>
+        </select>
+        <label id="label_rows_dimention"><i class="fa fa-th-large " aria-hidden="true "></i>Row_dimension </label>
+        <select  id="select_colummns_dimention" size="2" [(ngModel)]="selectdimentionrows" formControlName="selectdimentionrows">   <option>
+
+            {{printed_Option_rows_dimention}}
+
+                    </option>
+                    </select>
+           
+          
+        
+                    <label  style="position: fixed; margin-left: 470px; margin-top: 150px;" ><i class="fa fa-filter" aria-hidden="true" ></i>Condition filtred </label>                      
+     <input type="text" [(ngModel)]="condition" formControlName="condition"id="input_condition">
+                        
+       
+        <label id="label_filtred_with" ><i class="fa fa-filter" aria-hidden="true" ></i>Filtred with </label>
+
+        <div id="group_button_filtred"  class="btn-group" role="group">
+            <button id="f1"(click)="week()" type="button" class="btn btn-danger" routerLink="/table" [state]="{name_measure:data}"  >Week</button>
+            <button id="r1" (click)="month()" type="button" class="btn btn-danger" routerLink="/table"  [state]="{name_measure:data}" >Month</button>
+            <button id="c1" (click)="trimester()"type="button" class="btn btn-danger" routerLink="/table" [state]="{name_measure:data}"  >Trimester</button>
+            <button id="f1" (click)="quarter()" type="button" class="btn btn-danger" routerLink="/table"[state]="{name_measure:data}"  >Quarter</button>
+            <button id="f1" (click)="year()" type="button" class="btn btn-danger" routerLink="/table" [state]="{name_measure:data}" >Year</button>
+        </div>
+      
+</form>
+<button type="button1" id="button1" class="btn btn-dark" routerLink="/choosedementionandmesure" >Back</button>
+<button (click)="createmdx()" type="button2" id="bouton2" class="btn btn-success" routerLink="/table">Run</button>
+
+
+
+    </div>
+</form>

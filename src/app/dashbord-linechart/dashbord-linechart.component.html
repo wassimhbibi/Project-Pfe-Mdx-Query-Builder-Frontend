@@ -1,0 +1,22 @@
+<form class="box" >
+  <button id="btn_modifier" class="btn btn-dark" routerLink="/table" style="margin-top: 500px; position: fixed;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+<div style="display: block;" style="display:block;width: 600px;height: 850px; margin-left: 280px; margin-bottom: 80px; position:fixed;">
+    <canvas baseChart width="450px" height="350px" 
+                [data]="lineChartData"
+                [options]="lineChartOptions"
+                [type]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  
+ <!----<div class="flex-item">
+    <table class="table table-responsive table-condensed">
+      <tr>
+        <th *ngFor="let label of lineChartData.labels">{{label}}</th>
+      </tr>
+      <tr *ngFor="let d of lineChartData.datasets; let i=index" [class]="'line-'+i">
+        <td *ngFor="let label of lineChartData.labels; let j=index">{{d && d.data[j]}}</td>
+      </tr>
+    </table>
+</div>-->
+</form>

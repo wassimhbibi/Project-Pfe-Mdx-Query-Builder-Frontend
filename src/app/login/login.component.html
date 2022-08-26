@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- MDB -->
+
+    <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js "></script>
+    <form  class="box" [formGroup]="recaptchaform" [formGroup]="loginform" (ngSubmit)="submitData() ">
+
+        <div>
+            <img src="assets/p.png" id="logoacteol">
+        </div>
+
+
+
+        <!-- Name -->
+        <div class="form-outline mb-4 ">
+            <label class=" form-label" for="form5Example1 "><i class="fas fa-user-alt "></i>    UserName </label>
+            <input type="text" class="form-control" [(ngModel)]="username" formControlName="name" placeholder="Enter user name " />
+            <!--display erorr star-->
+            <div *ngIf="name.invalid && name.touched ">
+                <span class="error" *ngIf="name.errors?.required"> Name is required</span>
+                <span class="error" *ngIf="name.errors?.pattern"> Enter only caracters</span>
+            </div>
+            <!--display error finished-->
+        </div>
+
+        <!-- Password  -->
+
+        <div class=" form-outline mb-4 ">
+            <label class="form-label" for="form5Example2"><i class="fas fa-unlock-alt "></i>  PassWord</label>
+            <input type="password" class="form-control" [(ngModel)]="userpassword" formControlName="pass" placeholder="Enter password" required>
+           
+                <ngx-recaptcha2   #captchaElem [siteKey]="siteKey" [theme]="theme" [size]="size" [hl]="lang" formControlName="recaptcha"[type]="type"  > </ngx-recaptcha2>
+                
+          
+        
+           
+            <!--display error star-->
+            <div *ngIf=" pass.invalid && pass.touched">
+                <span class="error " *ngIf="pass.errors?.required ">Password is required</span>
+                <span class="error " *ngIf="pass.errors?.pattern "> Password must 8 caracters and contain both number and  letters/special caracters!</span>
+            </div>
+            <!--display error finished-->
+        </div>
+        <!-- Submit button -->
+        <button (click)="rech()"  type="submit" class="btn btn-danger btn-block mb-4 "   [disabled]="loginform.invalid">Connecte</button>
+        <div class="text-center ">
+            <p style="color:rgb(223, 66, 66) ">Not a member?
+                <a style="color:rgb(242, 247, 250) " routerLink="creataccount">Create account</a>
+            </p>
+
+
+        </div>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<form class="box" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        <img src="assets/p.png" id="logoacteol">
+    </div>
+
+    <div class="center-on-page" id="chose">
+
+
+        <div class="select">
+            <select class="custom-select mb-3" formControlName="servername">
+                <option value="">Choose your serveur</option>
+                <option *ngFor="let i of nameserve" >{{i.srvname}}</option>
+                 
+                
+            </select>
+        </div>
+        <!--star error block -->
+        <div *ngIf="registrationForm.invalid">
+            <span  class="error" >Please provide server name</span>
+        </div>
+        <!--finnal error block-->
+    </div>
+    <button type="submit" class="btn btn-danger btn-block mb-4" id="bouton" [disabled]="registrationForm.invalid" routerLink="/usecube">Connecte</button>
+
+
+</form>

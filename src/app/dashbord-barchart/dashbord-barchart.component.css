@@ -1,0 +1,18 @@
+.box {
+    position: fixed;
+    top: 25%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    background: rgba(254, 254, 254 
+    , 0.8);
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15%;
+    border-radius: 0.625rem;
+}
+

@@ -1,0 +1,10 @@
+<form class="box">
+  <button id="btn_modifier" class="btn btn-dark" routerLink="/table" style="margin-top: 520px; position: fixed;"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+<div class="chart" style="display:block;width: 550px;height: 550px; margin-left: 260px; margin-top: 20px; position: fixed;">
+    <canvas baseChart
+            [data]="pieChartData"
+            [type]="pieChartType"
+            [options]="pieChartOptions">
+          </canvas>
+  </div>
+</form>

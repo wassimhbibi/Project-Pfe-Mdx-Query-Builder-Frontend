@@ -1,0 +1,28 @@
+<form class="box" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        <img src="assets/p.png" id="logoacteol">
+    </div>
+
+    <div class="center-on-page" id="chose">
+
+
+        <div class="select">
+            <select class="custom-select mb-3" formControlName="cubename" [(ngModel)]="name_cube">
+                <option value="">Choose your cube</option>
+                <option *ngFor="let i of namecube" >{{i.cube_name}}</option>
+                 
+                
+            </select>
+        </div>
+
+        <!--star error block -->
+        <div *ngIf="registrationForm.invalid">
+            <span class="error">Please provide cube name</span>
+        </div>
+        <!--finnal error block-->
+    </div>
+    <button type="submit" class="btn btn-danger btn-block mb-4" id="bouton" [disabled]="registrationForm.invalid" routerLink="/choosedementionandmesure"[state]="{cube:name_cube}">Connecte</button>
+
+
+</form>
